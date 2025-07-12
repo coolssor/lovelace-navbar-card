@@ -167,9 +167,9 @@ const ROUTE_STYLES = css`
     right: 0;
   }
   .badge.with-counter {
-    min-width: 16px;
+    min-width: 12px;
     width: auto !important;
-    padding: 0px 2px;
+    padding: 0px 4px;
     height: 16px;
     display: flex;
     align-items: center;
