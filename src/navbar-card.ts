@@ -346,6 +346,8 @@ export class NavbarCard extends LitElement {
         ? processTemplate(this.hass, route.selected)
         : this._location == route.url;
 
+    const hasLabels = this._shouldShowLabels(false);
+
     if (processTemplate(this.hass, route.hidden)) {
       return null;
     }
@@ -364,9 +366,9 @@ export class NavbarCard extends LitElement {
           ${this._getRouteIcon(route, isActive)}
           <md-ripple></md-ripple>
         </div>
-        ${this._shouldShowLabels(false)
+        ${hasLabels
           ? html`<div class="label ${isActive ? 'active' : ''}">
-              ${processTemplate(this.hass, route.label) ?? ' '}
+              ${processTemplate(this.hass, route.label) ?? html`&nbsp;`}
             </div>`
           : html``}
       </div>
