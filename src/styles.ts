@@ -142,10 +142,19 @@ const ROUTE_STYLES = css`
   .label {
     flex: 1;
     width: 100%;
-    /* TODO fix ellipsis*/
     text-align: center;
     font-size: var(--paper-font-caption_-_font-size, 12px);
     font-weight: 500;
+  }
+
+  .route .label {
+    flex: unset !important;
+    width: unset !important;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   /* Badge styling */
